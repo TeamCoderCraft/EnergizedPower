@@ -7,9 +7,6 @@ A Minecraft mod about energy
 
 ### Releases
  - [Jenkins Releases](http://build.teamcodercraft.tk:9090/job/EnergizedPower/) 
- 
-### Jenkins Build Status
-[![Build Status](http://build.teamcodercraft.tk:9090/job/EnergizedPower/badge/icon)](http://build.teamcodercraft.tk:9090/job/EnergizedPower/)
 
 ### Modpacks
 You may use this mod in any modpack without asking.
