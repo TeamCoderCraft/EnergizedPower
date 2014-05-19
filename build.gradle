@@ -32,6 +32,22 @@ minecraft {
     replace '${mcversion}', version
 }
 
+sourceSets {
+	main {
+		java {
+			srcDir 'src/main/java'
+		}
+		resources {
+			srcDir 'src/main/resources'
+		}
+	}
+	api {
+		java {
+			srcDir 'src/api/java'
+		}
+	}
+}
+
 processResources
 {
     inputs.property "version", project.version
@@ -50,7 +66,12 @@ processResources
 
 task sourceJar(type: Jar) {
 	from sourceSets.main.allSource
+	from sourceSets.api.allSource
 	classifier = 'sources'
+}
+
+javadoc {
+	source += sourceSets.api.allSource
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
@@ -60,7 +81,17 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 
 task devJar(type: Jar) {
 	from sourceSets.main.output
+	from sourceSets.api.output
 	classifier = 'dev'
 }
 
-build.dependsOn sourceJar, javadocJar, devJar
+task apiJar(type: Jar) {
+	from sourceSets.api.output
+	classifier = 'api'
+}
+
+jar {
+	from sourceSets.api.output
+}
+
+build.dependsOn sourceJar, javadocJar, devJar, apiJar
