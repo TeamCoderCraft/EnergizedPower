@@ -1,0 +1,13 @@
+[
+{
+	"modid": "CCEnergizedPower",
+	"name": "Energized Power",
+	"description": "A mod that adds powerful electricity",
+	"version": "${version}",
+	"mcversion": "${mcversion}",
+	"parent": "",
+	"authorList": ["Matthieu Parizeau"],
+	"credits": "All the members of TeamCodeCraft",
+	"logoFile": ""
+}
+]
