@@ -4,7 +4,10 @@ import com.codecraft.energizedpower.init.ModBlocks;
 import com.codecraft.energizedpower.init.ModCrafting;
 import com.codecraft.energizedpower.init.ModEntities;
 import com.codecraft.energizedpower.init.ModItems;
+import com.codecraft.energizedpower.init.ModOres;
+import com.codecraft.energizedpower.init.ModPackets;
 import com.codecraft.energizedpower.init.ModTiles;
+import com.codecraft.energizedpower.init.ModWorldGen;
 import com.codecraft.energizedpower.proxy.CommonProxy;
 import com.codecraft.energizedpower.reference.Reference;
 
@@ -16,15 +19,29 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.SidedProxy;
 
-@Mod(modid = Reference.modid, name = Reference.name, version = Reference.version)
+/**
+ * The main mod class
+ * @author Matthieu Parizeau
+ */
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
 public class EnergizedPower {
 	
-	@Instance(Reference.modid)
+	/**
+	 * The instance of the mod
+	 */
+	@Instance(Reference.MOD_ID)
 	public static EnergizedPower instance;
 	
-	@SidedProxy(clientSide = Reference.clientproxy, serverSide = Reference.commonproxy)
+	/**
+	 * The proxy of the mod
+	 */
+	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
 	public static CommonProxy proxy;
 	
+	/**
+	 * PreInitialize the mod
+	 * @param event FMLPreInit event
+	 */
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
@@ -33,14 +50,26 @@ public class EnergizedPower {
 		ModCrafting.init();
 		ModEntities.init();
 		ModTiles.init();
+		ModPackets.init();
+		ModWorldGen.init();
+		ModOres.init();
+		proxy.init();
 	}
 	
+	/**
+	 * Initialize the mod
+	 * @param event FMLInit event
+	 */
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
 		
 	}
 	
+	/**
+	 * PostInitialize the mod
+	 * @param event FMLPostInit event
+	 */
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{

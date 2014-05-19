@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.Side;
  */
 public class PacketHandler {
 	
-	protected static SimpleNetworkWrapper INSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel(Reference.modid);
+	protected static SimpleNetworkWrapper INSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel(Reference.MOD_ID);
 	
 	/**
 	 * Register a packet

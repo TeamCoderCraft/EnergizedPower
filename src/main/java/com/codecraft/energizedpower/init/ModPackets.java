@@ -1,13 +1,13 @@
 package com.codecraft.energizedpower.init;
 
 /**
- * Contains all the mods entities
+ * Contains all the mods packets
  * @author Matthieu Parizeau
  */
-public class ModEntities {
+public class ModPackets {
 	
 	/**
-	 * Initialize Entities
+	 * Initialize Packets
 	 */
 	public static void init()
 	{

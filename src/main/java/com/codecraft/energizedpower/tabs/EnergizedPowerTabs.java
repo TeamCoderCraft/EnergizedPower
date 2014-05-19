@@ -4,6 +4,10 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
+/**
+ * Contains all the creative tabs for the mod
+ * @author Matthieu Parizeau
+ */
 public class EnergizedPowerTabs {
 	
 	public static CreativeTabs mainTab = new CreativeTabs("main")
