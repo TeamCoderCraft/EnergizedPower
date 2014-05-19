@@ -48,20 +48,17 @@ processResources
     }
 }
 
-task sourceJar(type: Jar)
-{
+task sourceJar(type: Jar) {
 	from sourceSets.main.allSource
 	classifier = 'sources'
 }
 
-task javadocJar(type: Jar, dependsOn: javadoc)
-{
+task javadocJar(type: Jar, dependsOn: javadoc) {
 	classifier = 'javadoc'
 	from 'build/docs/javadoc'
 }
 
-task devJar(type: Jar)
-{
+task devJar(type: Jar) {
 	from sourceSets.main.output
 	classifier = 'dev'
 }
