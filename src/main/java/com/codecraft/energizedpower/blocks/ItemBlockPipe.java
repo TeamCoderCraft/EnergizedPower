@@ -2,9 +2,6 @@ package com.codecraft.energizedpower.blocks;
 
 import java.util.List;
 
-import com.codecraft.energizedpower.api.PipeType;
-import com.codecraft.energizedpower.core.StringUtil;
-
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -12,6 +9,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
+
+import com.codecraft.energizedpower.api.PipeType;
 
 /**
  * Item for Pipe Block
@@ -31,8 +30,7 @@ public class ItemBlockPipe extends ItemBlock {
 		int meta = this.getMetadata(itemstack.getItemDamage());
 		// get the pipe type from metadata
 		PipeType type = PipeType.getById(meta);
-		String name = StringUtil.toCamelCase(type.name());
-		list.add(EnumChatFormatting.AQUA.toString() + name);
+		list.add(EnumChatFormatting.AQUA.toString() + type.getLocalizedName());
 	}
 	
 	@Override

@@ -21,6 +21,12 @@ public class BlockPipe extends StandardTileBlock {
 	}
 	
 	@Override
+	public boolean isOpaqueCube()
+	{
+		return false;
+	}
+	
+	@Override
 	public boolean renderAsNormalBlock()
 	{
 		return false;

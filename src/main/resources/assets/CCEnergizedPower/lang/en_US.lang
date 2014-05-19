@@ -1,0 +1,5 @@
+itemGroup.main=Energized Power
+pipeType.item=Item
+pipeType.power=Power
+pipeType.fluid=Fluid
+tile.pipe.name=Pipe

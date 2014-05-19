@@ -1,8 +1,9 @@
 package com.codecraft.energizedpower.tabs;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+
+import com.codecraft.energizedpower.init.ModBlocks;
 
 /**
  * Contains all the creative tabs for the mod
@@ -16,7 +17,7 @@ public class EnergizedPowerTabs {
 		@Override
 		public Item getTabIconItem()
 		{
-			return Items.apple; // TODO: Set Proper Item
+			return Item.getItemFromBlock(ModBlocks.pipe);
 		}
 		
 	};
