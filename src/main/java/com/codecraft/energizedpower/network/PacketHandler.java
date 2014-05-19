@@ -28,7 +28,8 @@ public class PacketHandler {
 	@SuppressWarnings("unchecked")
 	public static void register(Class<? extends IPacket> packet, Side side, int id)
 	{
-		INSTANCE.registerMessage((Class<? extends IMessageHandler<IMessage, IMessage>>)packet, (Class<IMessage>)packet, id, side);
+		Class<? extends Object> clazz = packet;
+		INSTANCE.registerMessage((Class<? extends IMessageHandler<IMessage, IMessage>>)clazz, (Class<IMessage>)clazz, id, side);
 	}
 	
 	/**
