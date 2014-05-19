@@ -5,6 +5,9 @@ A Minecraft mod about energy
 ### Credits
  - [Matthieu Parizeau](http://github.com/mattparizeau) - Original Creator of the mod
 
+### Releases
+ - [Jenkins Releases](http://build.teamcodercraft.tk:9090/job/EnergizedPower/) 
+ 
 ### Jenkins Build Status
 [![Build Status](http://build.teamcodercraft.tk:9090/job/EnergizedPower/badge/icon)](http://build.teamcodercraft.tk:9090/job/EnergizedPower/)
 
