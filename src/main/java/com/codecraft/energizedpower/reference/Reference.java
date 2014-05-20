@@ -5,7 +5,7 @@ package com.codecraft.energizedpower.reference;
  * @author Matthieu Parizeau
  */
 public class Reference {
-	public static final String MOD_ID = "CCEnergizedPower";
+	public static final String MOD_ID = "ccenergizedpower";
 	public static final String MOD_NAME = "Energized Power";
 	public static final String MOD_VERSION = "${version}";
 	

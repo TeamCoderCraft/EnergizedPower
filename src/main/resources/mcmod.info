@@ -1,6 +1,6 @@
 [
 {
-	"modid": "CCEnergizedPower",
+	"modid": "ccenergizedpower",
 	"name": "Energized Power",
 	"description": "A mod that adds powerful electricity",
 	"version": "${version}",

@@ -5,6 +5,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import com.codecraft.energizedpower.api.PipeType;
+import com.codecraft.energizedpower.proxy.ClientProxy;
 import com.codecraft.energizedpower.tiles.TilePipe;
 
 /**
@@ -18,6 +19,9 @@ public class BlockPipe extends StandardTileBlock {
 		super(Material.iron);
 		this.setHardness(0.6F);
 		this.setResistance(1.0F);
+		//float min = 5.5F / 16.0F;
+		//float max = 1.0F-min;
+		//this.setBlockBounds(min, min, min, max, max, max);
 	}
 	
 	@Override
@@ -29,13 +33,13 @@ public class BlockPipe extends StandardTileBlock {
 	@Override
 	public boolean renderAsNormalBlock()
 	{
-		return false;
+		return true;
 	}
 	
 	@Override
 	public int getRenderType()
 	{
-		return -1;
+		return ClientProxy.pipeId;
 	}
 	
 	@Override
