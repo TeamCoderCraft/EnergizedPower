@@ -42,15 +42,15 @@ public class Location {
 			case DOWN:
 				return new Location(world, x, y - 1, z);
 			case EAST:
-				return new Location(world, x - 1, y, z);
+				return new Location(world, x + 1, y, z);
 			case NORTH:
-				return new Location(world, x, y, z + 1);
-			case SOUTH:
 				return new Location(world, x, y, z - 1);
+			case SOUTH:
+				return new Location(world, x, y, z + 1);
 			case UP:
 				return new Location(world, x, y + 1, z);
 			case WEST:
-				return new Location(world, x + 1, y, z);
+				return new Location(world, x - 1, y, z);
 			default:
 				return null;
 			

@@ -16,12 +16,10 @@ public class BlockPipe extends StandardTileBlock {
 
 	public BlockPipe()
 	{
-		super(Material.iron);
-		this.setHardness(0.6F);
-		this.setResistance(1.0F);
-		//float min = 5.5F / 16.0F;
-		//float max = 1.0F-min;
-		//this.setBlockBounds(min, min, min, max, max, max);
+		super(Material.ground);
+		this.setHardness(0.0F);
+		this.setResistance(0.0F);
+		this.setStepSound(soundTypeGlass);
 	}
 	
 	@Override
@@ -33,13 +31,19 @@ public class BlockPipe extends StandardTileBlock {
 	@Override
 	public boolean renderAsNormalBlock()
 	{
-		return true;
+		return false;
 	}
 	
 	@Override
 	public int getRenderType()
 	{
 		return ClientProxy.pipeId;
+	}
+	
+	@Override
+	public int damageDropped(int meta)
+	{
+		return meta;
 	}
 	
 	@Override
