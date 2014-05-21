@@ -3,8 +3,11 @@ package com.codecraft.energizedpower.core;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.inventory.IInventory;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.fluids.IFluidHandler;
+import net.minecraftforge.fluids.IFluidTank;
 
 import com.codecraft.energizedpower.api.IPipe;
 import com.codecraft.energizedpower.api.PipeType;
@@ -19,10 +22,19 @@ public class PipeHelper {
 		for (ForgeDirection direction : ForgeDirection.VALID_DIRECTIONS)
 		{
 			Location dirLoc = location.getFromDirection(direction);
-			if (dirLoc.getTile() != null && dirLoc.getTile() instanceof IPipe)
+			if (dirLoc.getTile() != null)
 			{
-				IPipe pipe = (IPipe)dirLoc.getTile();
-				if (pipe.getType() == type)
+				if (dirLoc.getTile() instanceof IPipe)
+				{
+					IPipe pipe = (IPipe)dirLoc.getTile();
+					if (pipe.getType() == type)
+					{
+						connections.add(direction);
+					}
+				} else if (dirLoc.getTile() instanceof IInventory && type == PipeType.ITEM)
+				{
+					connections.add(direction);
+				} else if ((dirLoc.getTile() instanceof IFluidTank || dirLoc.getTile() instanceof IFluidHandler) && type == PipeType.FLUID)
 				{
 					connections.add(direction);
 				}

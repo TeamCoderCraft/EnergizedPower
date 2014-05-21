@@ -3,3 +3,4 @@ pipeType.item=Item
 pipeType.power=Power
 pipeType.fluid=Fluid
 tile.pipe.name=Pipe
+item.wrench.name=Wrench

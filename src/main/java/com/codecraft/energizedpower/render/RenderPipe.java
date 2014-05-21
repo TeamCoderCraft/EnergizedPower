@@ -71,6 +71,7 @@ public class RenderPipe implements ISimpleBlockRenderingHandler {
 	
 	public void renderInventory(Block block, int metadata)
 	{
+		GL11.glDisable(GL11.GL_LIGHTING);
 		Tessellator tessellator = Tessellator.instance;
 		
 		Minecraft.getMinecraft().getTextureManager().bindTexture(texture);
@@ -156,6 +157,8 @@ public class RenderPipe implements ISimpleBlockRenderingHandler {
 			tessellator.addVertexWithUV(MIN, 0.0F, MIN, MIN, MIN);
 		}
 		tessellator.draw();
+		
+		GL11.glEnable(GL11.GL_LIGHTING);
 	}
 
 	@Override
