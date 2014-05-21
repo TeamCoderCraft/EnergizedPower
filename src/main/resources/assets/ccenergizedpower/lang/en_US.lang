@@ -4,3 +4,7 @@ pipeType.power=Power
 pipeType.fluid=Fluid
 tile.pipe.name=Pipe
 item.wrench.name=Wrench
+item.wrench.desc=Used to pick up pipes and machines
+phrase.moreInfo=Press SHIFT for more info...
+type.utility.name=Utility
+type.transport.name=Transport
