@@ -17,11 +17,8 @@ public class ClientProxy extends CommonProxy {
 	{
 		super.init();
 		
-		//RenderPipe pipeRender = new RenderPipe();
 		pipeId = RenderingRegistry.getNextAvailableRenderId();
 		RenderingRegistry.registerBlockHandler(pipeId, new RenderPipe());
-		//ClientRegistry.bindTileEntitySpecialRenderer(TilePipe.class, pipeRender);
-		//MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ModBlocks.pipe), new RenderPipeItem(pipeRender));
 	}
 	
 }

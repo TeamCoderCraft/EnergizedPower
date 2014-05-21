@@ -7,11 +7,22 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 
+/**
+ * Location Wrapper
+ * @author Matthieu Parizeau
+ */
 public class Location {
 	
 	private IBlockAccess world;
 	private int x, y, z;
 	
+	/**
+	 * Creates a new location
+	 * @param world the world
+	 * @param x the x position
+	 * @param y the y position
+	 * @param z the z position
+	 */
 	public Location(IBlockAccess world, int x, int y, int z)
 	{
 		this.world = world;
@@ -20,21 +31,38 @@ public class Location {
 		this.z = z;
 	}
 	
+	/**
+	 * Gets the block at this location
+	 * @return the block at this location
+	 */
 	public Block getBlock()
 	{
 		return world.getBlock(x, y, z);
 	}
 	
+	/**
+	 * Gets the block metadata at this location
+	 * @return the block metadata at this location
+	 */
 	public int getMetadata()
 	{
 		return world.getBlockMetadata(x, y, z);
 	}
 	
+	/**
+	 * Gets the tileentity at this location
+	 * @return the tileentity at this location
+	 */
 	public TileEntity getTile()
 	{
 		return world.getTileEntity(x, y, z);
 	}
 	
+	/**
+	 * Gets another location based on the direction specified
+	 * @param direction the direction to get the location from
+	 * @return the new location
+	 */
 	public Location getFromDirection(ForgeDirection direction)
 	{
 		switch (direction)
@@ -80,21 +108,37 @@ public class Location {
 		return Objects.hash(this.world, this.x, this.y, this.z);
 	}
 	
+	/**
+	 * Gets the world
+	 * @return the world
+	 */
 	public IBlockAccess getWorld()
 	{
 		return this.world;
 	}
 	
+	/**
+	 * Gets the x position
+	 * @return the x position
+	 */
 	public int getX()
 	{
 		return this.x;
 	}
 	
+	/**
+	 * Gets the y position
+	 * @return the y position
+	 */
 	public int getY()
 	{
 		return this.y;
 	}
 	
+	/**
+	 * Gets the z position
+	 * @return the z position
+	 */
 	public int getZ()
 	{
 		return this.z;

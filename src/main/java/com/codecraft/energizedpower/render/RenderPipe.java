@@ -69,6 +69,11 @@ public class RenderPipe implements ISimpleBlockRenderingHandler {
 		return true;
 	}
 	
+	/**
+	 * Render the block as an inventory item
+	 * @param block the block to render
+	 * @param metadata the metadata of the block to render
+	 */
 	public void renderInventory(Block block, int metadata)
 	{
 		GL11.glDisable(GL11.GL_LIGHTING);

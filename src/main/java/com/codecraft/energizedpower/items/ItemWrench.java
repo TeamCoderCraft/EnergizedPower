@@ -13,6 +13,10 @@ import net.minecraft.world.World;
 import com.codecraft.energizedpower.api.IWrenchableBlock;
 import com.codecraft.energizedpower.core.ItemUtil;
 
+/**
+ * Wrench Item
+ * @author Matthieu Parizeau
+ */
 public class ItemWrench extends StandardItem {
 	
 	public ItemWrench()
