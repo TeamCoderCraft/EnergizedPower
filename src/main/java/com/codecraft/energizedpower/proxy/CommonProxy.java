@@ -7,9 +7,25 @@ package com.codecraft.energizedpower.proxy;
 public class CommonProxy {
 	
 	/**
+	 * Pre Initialize
+	 */
+	public void preInit()
+	{
+		
+	}
+	
+	/**
 	 * Initialize
 	 */
 	public void init()
+	{
+		
+	}
+	
+	/**
+	 * Post Initialize
+	 */
+	public void postInit()
 	{
 		
 	}
