@@ -4,6 +4,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBucket;
 
+import com.codecraft.energizedpower.items.ItemDebug;
 import com.codecraft.energizedpower.items.ItemWrench;
 import com.codecraft.energizedpower.reference.Reference;
 import com.codecraft.energizedpower.tabs.EnergizedPowerTabs;
@@ -18,6 +19,7 @@ public class ModItems {
 	
 	public static Item wrench;
 	public static Item energizedWaterBucket;
+	public static Item debug;
 	
 	/**
 	 * Initialize Items
@@ -29,6 +31,9 @@ public class ModItems {
 		
 		GameRegistry.registerItem(wrench, "wrench");
 		GameRegistry.registerItem(energizedWaterBucket, "bucket_energized_water");
+		
+		debug = new ItemDebug().setUnlocalizedName("debug").setTextureName("debug");
+		GameRegistry.registerItem(debug, "debug");
 	}
 	
 }

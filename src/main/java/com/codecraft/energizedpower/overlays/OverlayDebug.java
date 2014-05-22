@@ -35,7 +35,7 @@ public class OverlayDebug extends OverlayBase {
 			if (location.getTile() != null)
 				tile = "\\" + "tile";
 			blockName = Block.blockRegistry.getNameForObject(location.getBlock()) + ":" + location.getMetadata() + tile;
-			this.font.drawString("Looking At: " + blockName, x, y, 0xFFFFFF);
+			this.font.drawStringWithShadow("Looking At: " + blockName, x, y, 0xFFFFFF);
 		} else {
 			IDebugInfo info = (IDebugInfo)location.getBlock();
 			List<String> lines = new ArrayList<String>();
@@ -43,7 +43,7 @@ public class OverlayDebug extends OverlayBase {
 			int lastX = 0;
 			for (String line : lines)
 			{
-				this.font.drawString(line, lastX, y, 0xFFFFFF);
+				this.font.drawStringWithShadow(line, lastX, y, 0xFFFFFF);
 				lastX += font.FONT_HEIGHT;
 			}
 		}

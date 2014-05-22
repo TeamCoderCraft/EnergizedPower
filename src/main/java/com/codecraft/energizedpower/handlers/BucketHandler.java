@@ -1,4 +1,4 @@
-package com.codecraft.energizedpower.events;
+package com.codecraft.energizedpower.handlers;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;

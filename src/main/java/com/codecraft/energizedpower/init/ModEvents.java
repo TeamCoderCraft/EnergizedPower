@@ -2,8 +2,8 @@ package com.codecraft.energizedpower.init;
 
 import net.minecraftforge.common.MinecraftForge;
 
-import com.codecraft.energizedpower.events.BucketHandler;
-import com.codecraft.energizedpower.events.LivingHandler;
+import com.codecraft.energizedpower.handlers.BucketHandler;
+import com.codecraft.energizedpower.handlers.LivingHandler;
 
 public class ModEvents {
 	
