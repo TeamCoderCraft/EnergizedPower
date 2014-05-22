@@ -5,7 +5,6 @@ import net.minecraft.block.Block;
 import com.codecraft.energizedpower.blocks.BlockPipe;
 import com.codecraft.energizedpower.blocks.EnergizedWater;
 import com.codecraft.energizedpower.blocks.ItemBlockPipe;
-import com.codecraft.energizedpower.tabs.EnergizedPowerTabs;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
