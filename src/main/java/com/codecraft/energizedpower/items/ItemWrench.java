@@ -21,7 +21,7 @@ public class ItemWrench extends StandardItem {
 	
 	public ItemWrench()
 	{
-		
+		this.setMaxStackSize(1);
 	}
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })

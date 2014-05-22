@@ -24,7 +24,7 @@ public class ModBlocks {
 	public static void init()
 	{
 		pipe = new BlockPipe().setBlockName("pipe").setBlockTextureName("pipe");
-		energizedWater = new EnergizedWater().setBlockName("energizedWater").setBlockTextureName("energized_water").setCreativeTab(EnergizedPowerTabs.mainTab);
+		energizedWater = new EnergizedWater().setBlockName("energizedWater").setBlockTextureName("energized_water");
 		
 		GameRegistry.registerBlock(pipe, ItemBlockPipe.class, "pipe");
 		GameRegistry.registerBlock(energizedWater, "energized_water");

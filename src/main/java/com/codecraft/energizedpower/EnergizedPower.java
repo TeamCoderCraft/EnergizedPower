@@ -3,6 +3,8 @@ package com.codecraft.energizedpower;
 import com.codecraft.energizedpower.init.ModBlocks;
 import com.codecraft.energizedpower.init.ModCrafting;
 import com.codecraft.energizedpower.init.ModEntities;
+import com.codecraft.energizedpower.init.ModEvents;
+import com.codecraft.energizedpower.init.ModFluidContainers;
 import com.codecraft.energizedpower.init.ModFluids;
 import com.codecraft.energizedpower.init.ModItems;
 import com.codecraft.energizedpower.init.ModOres;
@@ -55,6 +57,7 @@ public class EnergizedPower {
 		ModPackets.init();
 		ModWorldGen.init();
 		ModOres.init();
+		ModEvents.init();
 		proxy.init();
 	}
 	
@@ -65,7 +68,7 @@ public class EnergizedPower {
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		
+		ModFluidContainers.init();		
 	}
 	
 	/**

@@ -12,7 +12,7 @@ public class ModFluids {
 	 */
 	public static void init()
 	{
-		energizedWater = new Fluid("energizedWater").setLuminosity(15).setUnlocalizedName("tile.energizedWater.name");
+		energizedWater = new Fluid("energizedwater").setLuminosity(15).setUnlocalizedName("tile.energizedWater.name");
 		
 		FluidRegistry.registerFluid(energizedWater);
 	}
