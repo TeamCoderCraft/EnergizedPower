@@ -4,14 +4,13 @@ import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 
 import com.codecraft.energizedpower.api.client.gui.GuiBase;
-import com.codecraft.energizedpower.reference.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class Widget {
 	
-	private static final ResourceLocation texture = new ResourceLocation(Reference.MOD_ID, "textures/gui/widgets/widget.png");
+	private static final ResourceLocation texture = new ResourceLocation("ccenergizedpower", "textures/gui/widgets/widget.png");
 	
 	protected Container container;
 	protected int color;
