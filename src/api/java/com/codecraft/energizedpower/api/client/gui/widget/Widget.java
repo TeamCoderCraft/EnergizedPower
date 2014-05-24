@@ -11,7 +11,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class Widget {
 	
-	private static final ResourceLocation texture = new ResourceLocation(Reference.MOD_ID, "textures/gui/widgets/widget.png");
+	private static final ResourceLocation texture = new ResourceLocation("ccenergizedpower", "textures/gui/widgets/widget.png");
 	
 	protected Container container;
 	protected int color;
