@@ -12,6 +12,7 @@ public class ContainerTestMachine extends ContainerBase {
 	public ContainerTestMachine(InventoryPlayer par1InventoryPlayer)
 	{
 		this.addWidget(new Widget(this, 176, 10, "Test"));
+		this.addWidget(new Widget(this, 176, 40, "Energy"));
 		
 		for (int i = 0; i < 3; ++i)
         {

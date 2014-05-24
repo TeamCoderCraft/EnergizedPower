@@ -19,8 +19,6 @@ public abstract class GuiBase extends GuiContainer {
 		super(container);
 	}
 	
-	
-	
 	@Override
 	protected void mouseClicked(int mouseX, int mouseY, int button)
 	{
@@ -31,8 +29,21 @@ public abstract class GuiBase extends GuiContainer {
 		
 		for (Widget widget : this.getContainer().getWidgets())
 		{
+			boolean cont = false;
+			for (Widget w : this.getContainer().getWidgets())
+			{
+				if (w.isOpen() && !widget.isOpen())
+					cont = true;
+			}
+			if (cont)
+				continue;
 			if (widget.isHovering(mX, mY))
+			{
+				for (Widget w : this.getContainer().getWidgets())
+					if (w != widget && w.isOpen())
+						w.close();
 				widget.onClick();
+			}
 		}
 	}
 	
@@ -48,6 +59,14 @@ public abstract class GuiBase extends GuiContainer {
 		
 		for (Widget widget : this.getContainer().getWidgets())
 		{
+			boolean cont = false;
+			for (Widget w : this.getContainer().getWidgets())
+			{
+				if (w.isOpen() && !widget.isOpen())
+					cont = true;
+			}
+			if (cont)
+				continue;
 			widget.renderForeground(this, x, y, mX, mY);
 		}
 	}
@@ -64,6 +83,14 @@ public abstract class GuiBase extends GuiContainer {
 		
 		for (Widget widget : this.getContainer().getWidgets())
 		{
+			boolean cont = false;
+			for (Widget w : this.getContainer().getWidgets())
+			{
+				if (w.isOpen() && !widget.isOpen())
+					cont = true;
+			}
+			if (cont)
+				continue;
 			widget.renderBackground(this, x, y, mX, mY);
 		}
 	}
@@ -90,6 +117,21 @@ public abstract class GuiBase extends GuiContainer {
 		List<String> list = new ArrayList<String>();
 		list.add(tooltip);
 		this.drawHoveringText(list, mouseX, mouseY, this.fontRendererObj);
+	}
+	
+	public void drawString(String s, int x, int y, int color)
+	{
+		this.fontRendererObj.drawString(s, x, y, color);
+	}
+	
+	public int getStrWidth(String s)
+	{
+		return this.fontRendererObj.getStringWidth(s);
+	}
+	
+	public int getStrHeight()
+	{
+		return this.fontRendererObj.FONT_HEIGHT;
 	}
 	
 	public ContainerBase getContainer()
